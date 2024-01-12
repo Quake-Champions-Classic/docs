@@ -35,7 +35,11 @@ Anyway, I hope you enjoy this little hobby project of mine! Let me know in the S
 ## Credits
 
 - **Tim Maccabe / RhapsodyInGeek**
-    - main mod author
+    - lead developer
+
+- **Jared Lau / fossil**
+    - mapping: Corrupted Keep
+    - https://www.artstation.com/jaredlau
 
 - **plague_spreader**
     - xpax.sh Linux shell script
