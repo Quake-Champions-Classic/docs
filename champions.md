@@ -15,6 +15,7 @@
 [Sorlag](#sorlag) | 
 [Slash](#slash) | 
 [Anarki](#anarki) | 
+[Galena](#galena) | 
 [Duke Nukem](#duke-nukem) | 
 [Intruder](#intruder) | 
 [Big John</p>](#big-john)
@@ -178,6 +179,20 @@
 
 > **Passive Ability : _Anti-Gravity_**
 <br>Anarki's hoverboard allows him to fall from any height unscathed.
+
+[Top](#champions)<br>
+
+---
+## <p align=center>Galena
+<p align=center><img src="images/champ_galena.png" height=180 /></p>
+
+> **First Appearance : _Quake Champions_**
+
+> **Active Ability : _Unholy Totem_**
+<br>Galena throws down up to 3 totems to heal both herself and her allies for 50 points, or cause 40 damage to her foes in a deadly area of effect. If 3 totems are active, healing will overstack and explosion damage will increase to 60.
+
+> **Passive Ability : _Channeling_**
+<br>Picking up health kits reduces Galena's ability cooldown by 5%. Picking up the Mega Health will reduce it by 10%.
 
 [Top](#champions)<br>
 

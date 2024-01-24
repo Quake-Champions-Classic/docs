@@ -20,17 +20,33 @@
 
 #### Additions
 
+- New Champion: Galena.
+
 - New Map: Insomnia. Supports Deathmatch.
+
+- New Music: "He Who Walks In Blood" (track31.ogg). Based off of Chris Vrenna's Volkerh track in Quake Champions.
 
 - Added ammo types Bullets, Bolts, and Slugs. Not currently implemented, for now they spawn Spikes, Rockets, and Cells respectively.
 
 - Added qcc_weapon_tribolt. Not currently implemented, for now spawns a grenade launcher.
+
+- Added `QCC_FL_ABILITY` flag. This should help aid in damage boosts for ability radius attacks against monsters.
+
+#### Changes
+
+- Death Knight: Flame Strike deals extra damage against monsters, to match with other Champions.
+
+- Duke Nukem: Devastator deals extra damage against monsters.
+
+- Keel: Multi-Grenades deal extra damage against monsters.
 
 #### Bug Fixes
 
 - Rerendered Duke "TRD" line from stereo to audio. Should play properly now.
 
 - Fixed broken precache of Duke "bug" line. Should play now.
+
+- Big John and Keel should now display the proper head gib skins.
 
 ---
 ## Version 10.1
