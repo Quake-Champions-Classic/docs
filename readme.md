@@ -32,7 +32,7 @@ This has largely been a study and exercise for me in game design while I take sm
 Anyway, I hope you enjoy this little hobby project of mine! Let me know in the Slipseer Discussion if you'd like to contribute or even just what you think of it! <3
 
 ---
-## Credits
+## Modder Credits
 
 - **Tim Maccabe / RhapsodyInGeek**
     - lead developer
