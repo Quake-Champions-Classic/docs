@@ -22,6 +22,8 @@
 
 - New Champion: Galena.
 
+- New Champion: Caleb.
+
 - New Map: Insomnia. Supports Deathmatch.
 
 - New Music: "He Who Walks In Blood" (track31.ogg). Based off of Chris Vrenna's Volkerh track in Quake Champions.
@@ -32,13 +34,19 @@
 
 - Added `QCC_FL_ABILITY` flag. This should help aid in damage boosts for ability radius attacks against monsters.
 
+- Added `.qccSpeakSpawn`, `.qccSpeakFrag`, `.qccSpeakItem`, `.qccSpeakCthonGreet`, `.qccSpeakCthonKill`, `.qccSpeakShubGreet`, and `.qccSpeakShubKill` fields to more easily facilitate "chatty" champions like Gordon Freeman.
+
 #### Changes
+
+- General: Replaced all calls to Duke Nukem's voice line functions with the new `.qccSpeak...` fields.
 
 - Death Knight: Flame Strike deals extra damage against monsters, to match with other Champions.
 
+- Keel: Multi-Grenades deal extra damage against monsters.
+
 - Duke Nukem: Devastator deals extra damage against monsters.
 
-- Keel: Multi-Grenades deal extra damage against monsters.
+- Duke Nukem: Now uses the new `.qccSpeak...` fields.
 
 #### Bug Fixes
 

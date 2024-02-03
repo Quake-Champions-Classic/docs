@@ -17,6 +17,7 @@
 [Anarki](#anarki) | 
 [Galena](#galena) | 
 [Duke Nukem](#duke-nukem) | 
+[Caleb](#caleb) | 
 [Intruder](#intruder) | 
 [Big John</p>](#big-john)
 
@@ -212,6 +213,21 @@
 <br>Duke will comment on almost everything he does. This can give away your position, but your opponents might be too distracted by the quips to take advantage of this.
 
 [Top](#champions)<br>
+
+---
+## <p align=center>Caleb
+<p align=center><img src="images/champ_caleb.png" height=180 /></p>
+
+> **First Appearance : _Blood_**
+
+> **Active Ability : _Dynamite_**
+<br>Caleb will light a bundle of dynamite. A subsequent press of the Ability or Shoot inputs will throw the dynamite. The dynamite has a timed fuse that lasts 6 seconds. If thrown with the Ability input the dynamite will wait for the fuse. If thrown with the Shoot input the dynamite will explode on impact. Holding onto the dynamite too long is... fatal.
+
+> **Passive Ability : _Life Essence_**
+<br>Gibbing monsters or fragging champions will drop a still-beating Life Essence that heals Caleb and his allies for 25 points of health.
+
+> **Passive Ability : _Soul Burned_**
+<br>Caleb will taunt his victims as he frags them, and comment on the weapons and some of the artifacts he picks up. This can give away your position, but your opponents might be feeling the burns too much to take advantage of this.
 
 ---
 ## <p align=center>Intruder
