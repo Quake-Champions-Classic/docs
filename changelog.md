@@ -48,13 +48,13 @@
 
 - Duke Nukem: Now uses the new `.qccSpeak...` fields.
 
+- Reduced bit rate on Goroth music, cutting down file size significantly. Probably didn't need to be at 418 kbps.
+
 #### Bug Fixes
 
 - Rerendered Duke "TRD" line from stereo to audio. Should play properly now.
 
 - Fixed broken precache of Duke "bug" line. Should play now.
-
-- Big John and Keel should now display the proper head gib skins.
 
 ---
 ## Version 10.1
