@@ -50,6 +50,24 @@
 
 - Reduced bit rate on Goroth music, cutting down file size significantly. Probably didn't need to be at 418 kbps.
 
+- Separated QCC weapons into separate QC files to make them more manageable.
+
+- Railgun ammo now uses slugs instead of cells. The icon will still show the cells icon but only because the icons are hardcoded. The ammo count will display correctly.
+
+- Shells will now also give Bullets if there are no Bullet Boxes in the map. While not implemented yet, this will allow you to reload the Machine Gun in the official campaigns and multiplayer maps.
+
+- Rockets will now also give Bolts if there are no Bolt Boxes in the map. While not implemented yet, this will allow you to reload the Tribolt in the official campaigns and multiplayer maps.
+
+- Cells will now also give Slugs if there are no Slug Boxes in the map. This will allow you to reload the Railgun in the official campaigns and multiplayer maps.
+
+- Ammo and Weapon Pickup definitions moved to respective weapon QC files.
+
+- Hourglass methods separated into own QC file.
+
+- Light Armor and Heavy Armor methods moved to it_armor.qc.
+
+- QCC_ThrowPowerup method moved to it_powerup.qc.
+
 #### Bug Fixes
 
 - Rerendered Duke "TRD" line from stereo to audio. Should play properly now.
