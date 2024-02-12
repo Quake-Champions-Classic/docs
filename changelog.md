@@ -36,13 +36,21 @@
 
 - Added `.qccSpeakSpawn`, `.qccSpeakFrag`, `.qccSpeakItem`, `.qccSpeakCthonGreet`, `.qccSpeakCthonKill`, `.qccSpeakShubGreet`, and `.qccSpeakShubKill` fields to more easily facilitate "chatty" champions like Gordon Freeman.
 
+- Added considerations for **Duel** Rules; mostly just modifies some item timing things for now. You can enable Duel by setting your server's `deathmatch` variable to `2`.
+
+- Began adding **Team Deathmatch** code. Feel free to test it out by setting your server's `deathmatch` variable to `3`.
+
 #### Changes
 
-- General: Replaced all calls to Duke Nukem's voice line functions with the new `.qccSpeak...` fields.
+- Replaced all calls to Duke Nukem's voice line functions with the new `.qccSpeak...` fields.
+
+- Monsters no longer provide ability cooldown if they were killed by an ability.
 
 - Death Knight: Flame Strike deals extra damage against monsters, to match with other Champions.
 
 - Keel: Multi-Grenades deal extra damage against monsters.
+
+- Slash: Plasma Trail color now matches skin. She still only has two skins, but hopefully we can get more in the future.
 
 - Duke Nukem: Devastator deals extra damage against monsters.
 
@@ -52,7 +60,7 @@
 
 - Separated QCC weapons into separate QC files to make them more manageable.
 
-- Railgun ammo now uses slugs instead of cells. The icon will still show the cells icon but only because the icons are hardcoded. The ammo count will display correctly.
+- Railgun ammo now uses Slugs instead of Cells. The icon will still show the Cells icon but only because the icons are hardcoded. The ammo count will display correctly.
 
 - Shells will now also give Bullets if there are no Bullet Boxes in the map. While not implemented yet, this will allow you to reload the Machine Gun in the official campaigns and multiplayer maps.
 
@@ -68,9 +76,15 @@
 
 - QCC_ThrowPowerup method moved to it_powerup.qc.
 
+- Weapons now have respawn times based upon the server's `deathmatch` variable.
+	- Deathmatch 1 and 3 are Free For All and Team Deathmatch. Weapon respawn is 1 seconds.
+	- Deathmatch 2 is Duel. Weapon respawn is 5 seconds.
+
+- Ammo boxes now have a 20 second respawn time in all Deathmatch modes.
+
 #### Bug Fixes
 
-- Rerendered Duke "TRD" line from stereo to audio. Should play properly now.
+- Rerendered Duke "TRD" line from stereo to mono. Should play properly now.
 
 - Fixed broken precache of Duke "bug" line. Should play now.
 

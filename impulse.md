@@ -39,9 +39,11 @@ Additionally, each Champion is bound to an impulse as well. While it's not recom
 | 107 | Sorlag |
 | 108 | Slash |
 | 109 | Anarki |
-| 110 | Duke Nukem |
-| 111 | Intruder |
-| 112 | Big John |
+| 110 | Galena |
+| 111 | Duke Nukem |
+| 112 | Caleb |
+| 113 | Intruder |
+| 114 | Big John |
 <br>
 
 ---
