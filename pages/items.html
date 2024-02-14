@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="main">
+        <h1 align="center">Items</h1>
+
+        <p align="center">
+            <b>New Items</b><br>
+            <a href="#ArmorShard" target="_self">Armor Shard</a> | 
+            <a href="#LightArmor" target="_self">Light Armor</a> | 
+            <a href="#HeavyArmor" target="_self">Heavy Armor</a><br>
+            <a href="#TimeShard" target="_self">Time Shard</a> | 
+            <a href="#SpecialHealth" target="_self">Special Health</a><br>
+            <a href="#Railgun" target="_self">Railgun</a>
+        </p>
+        <p align="center">
+            <b>Changed Items</b><br>
+            <a href="#WeaponsAndAmmo" target="_self">Weapons and Ammo</a> | 
+            <a href="#Powerups" target="_self">Powerups</a><br>
+            <a href="#QuadDamage" target="_self">Quad Damage</a> | 
+            <a href="#Protection" target="_self">Pentagram of Protection</a> | 
+            <a href="#Megahealth" target="_self">Megahealth</a>
+        </p>
+
+        <hr>
+
+        <h2 align="center" id="NewItems">New Items</h2>
+        <h3>Armor</h3>
+        <p>
+            Armor has been reworked. There are no longer different classes of armor with different levels of protection. Instead we follow the Quake Champions ruleset.
+        </p>
+
+        <h3 id="ArmorShard">Armor Shard</h3>
+        <p>
+            <img src="../images/armorshard.png" height="180px"><br>
+            Restores 5 points of armor. Can raise armor up to 75 points above maximum. Only drops from other Champions and certain enemies. Disappears after a period of time.
+        </p>
+
+        <h3 id="LightArmor">Light Armor</h3>
+        <p>
+            <img src="../images/lightarmor.png" height="180px"><br>
+            Restores up to 50 points of armor. Replaces all Green and Yellow Armors.
+        </p>
+
+        <h3 id="HeavyArmor">Heavy Armor</h3>
+        <p>
+            <img src="../images/heavyarmor.png" height="180px"><br>
+            Restores 100 points of armor. Can raise armor up to 75 points above maximum. The Heavy Armor now respawns every 30 seconds. Replaces all Red Armors.
+        </p>
+
+        <h3 id="TimeShard">Time Shard</h3>
+        <p>
+            <img src="../images/timeshard.png" height="180px"><br>
+            Reduces remaining Active Ability cooldown by 4.5 seconds. Replaces all Rotten Health Kits.
+        </p>
+
+        <h3 id="SpecialHealth">Special Health</h3>
+        <p>
+            <img src="../images/specialhealth.png" height="180px"><br>
+            Restores 25 points of health. Can raise health above maximum, up to 175 total points. Respawns every 15 seconds. 
+            Found in Horde Mode and in the map <a href="maps.html#Crucible" target="main">Crucible</a>.
+        </p>
+
+        <h3 id="Railgun">Railgun</h3>
+        <p>
+            <img src="../images/railgun.png" height="180px"><br>
+            High damage hitscan sniping weapon. In Quake Champions Classic the Railgun uses up 6 cells per shot, for a total of 25 shots.
+        </p>
+        <p>
+            All of the base game multiplayer maps now have support for the Railgun, so long as they possess at least 2 Rocket Launchers. 
+            If so, one of the Rocket Launchers will be replaced.
+        </p>
+        <p>The original campaign now features one Railgun in each Episode.</p>
+
+        <hr>
+
+        <h2 align="center" id="ChangedItems">Changed Items</h2>
+        <h3 id="WeaponsAndAmmo">Weapons and Ammo</h3>
+        <p>
+            Weapons now respawn after 1 second in Deathmatch. If the server's "deathmatch" variable is set to 2, the server will use a 
+            "Duel" ruleset, causing weapons to respawn after 5 seconds. Ammo boxes now respawn after 20 seconds across all Deathmatch modes.
+        </p>
+
+        <h3 id="Powerups">Powerups</h3>
+        <p>Powerups now take 90 seconds to spawn in Multiplayer, then 120 seconds to respawn.</p>
+
+        <h3 id="QuadDamage">Quad Damage</h3>
+        <p>
+            <img src="../images/quad.png" height="180px"><br>
+            Quad Damage will now respawn as a Pentagram after being collected if a certain spawnflag is set.
+        </p>
+
+        <h3 id="Protection">Pentagram of Protection</h3>
+        <p>
+            <img src="../images/pentagram.png" height="180px"><br>
+            The Pentagram no longer grants invincibility. Instead it grants an additional 67% damage reduction. 
+            The effect stacks with the damage reduction from armor and abilities. 
+            The Pentagram will also now respawn as a Quad Damage after being collected if a certain spawnflag is set.
+        </p>
+
+        <h3 id="Megahealth">Megahealth</h3>
+        <p>
+            <img src="../images/megahealth.png" height="180px"><br>
+            Still restores 100 points of health, but now can only raise health 75 points above maximum. The Megahealth now respawns every 30 seconds.
+        </p>
+
+        <br><br><br>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="main">
+        <h1 align="center">Custom Maps</h1>
+        <p>Quake Champions Classic should be compatible with any custom maps that are vanilla or mission pack compatible.</p>
+        <p>
+            If you wish to add a custom map to the in-game map list, you will need to append them to the end of the map list in the "mapdb.json" 
+            located in the qcc folder. A template for appending a map to Quake Champions Classic is provided below.
+        </p>
+        <pre>
+            
+{
+    "title": "Custom Map's Name",
+    "bsp": "filename_without_extension",
+    "episode": "qcc",
+    "game": "qcc",
+    "dm": true/false,
+    "coop": true/false,
+    "horde": true/false,
+    "bots": true/false,
+    "sp": true/false
+}
+        </pre>
+
+        <h2 id="MappingForQCC">Mapping for Quake Champions Classic</h2>
+        <p>
+            It may be desired to make a map specifically for the mod. Provided in the Quake Champions Classic download are 
+            3 FGD files for use with a mapping tool like TrenchBroom:
+        </p>
+        <ul>
+            <b>
+                <li>qcc.fgd</li>
+                <li>tyrutils_ericw_base.fgd</li>
+                <li>messages.fgd</li>
+            </b>
+        </ul>
+        <p>
+            These FGD files will make all mission pack entities available in your preferred editor. 
+            Use them to make it easier to place Quake Champions Classic specific entities. 
+            The QCC FGD in particular will be updated any time a feature is added.
+        </p>
+        <p align=center><img src="../images/trenchbroomqcc.png" height="300px"></p>
+        <p>
+            If you're interested in working with me (RhapsodyInGeek) to include a map of yours in the official release, 
+            feel free to reach out to me on either the <a href="https://discord.gg/f5Y99aM" target="_blank"><b>Quake Mapping Discord</b></a> or the 
+            <a href="https://discord.com/invite/XAw2a8fQPX" target="_blank"><b>BlueKeyGames Discord</b></a>.
+        </p>
+
+        <br><br><br>
+    </div>
+</body>
+</html>

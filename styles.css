@@ -1,0 +1,149 @@
+/* Base Styles Start */
+body {
+    font-family: verdana, sans-serif;
+}
+
+a {
+    color: #7f0000;
+    text-decoration: none;
+}
+  
+a:hover {
+    color: #d70000;
+}
+  
+a:active {
+    color: #d70000;
+}
+
+blockquote {
+    color: #dbc3bb;
+    background-color: #0f0b07;
+}
+
+table {
+    color: #dbc3bb;
+    border-collapse: collapse;
+    background-color: #1f1f1f;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table.weapon {
+    margin-left: 0;
+}
+
+tr.header {
+    background-color: #070700;
+}
+
+td {
+    border-style: solid;
+    border-width: 2px;
+    padding: 5px;
+}
+
+pre {
+    color: #dbc3bb;
+    font-weight: 666;
+    background-color: #070700;
+}
+
+/* Base Styles End */
+
+/* Header Start */
+iframe.header {
+    height: 70px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-left: 10px;
+    background-color: #070700;
+    position: fixed;
+    border: none;
+    overflow: hidden;
+}
+
+div.head {
+    background-color: #070700;
+}
+/* Header End */
+
+/* Sidebar Navigation Start */
+iframe.sidenav {
+    top: 70px;
+    left: 0;
+    bottom: 0;
+    width: 360px;
+    height: calc(100% - 70px);
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border: none;
+    background-color: #0f0b07;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+div.sidenav {
+    color: #dbc3bb;
+    background-color: #0f0b07;
+}
+
+h3.sidenav {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+p.sidenav {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 25px;
+}
+
+p.sidenav2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 30px;
+    line-height: 25px;
+}
+
+a.sidenav {
+    color: #cf632b;
+    text-decoration: none;
+}
+  
+a.sidenav:hover {
+    color: #e7ab5f;
+}
+  
+a.sidenav:active {
+    color: #e7ab5f;
+}
+/* Sidebar Navigation End */
+
+/* Main Body Start */
+iframe.main {
+    top: 70px;
+    left: 360px;
+    bottom: 0;
+    right: 0;
+    width: calc(100% - 380px);
+    height: calc(100% - 70px);
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #eee3ce;
+    background-image: url("images/qccbg.png");
+    background-repeat: repeat-y;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+div.main {
+    color: #1f1f1f;
+}
+/* Main Body End */

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="main">
+        <h1 align="center" id="ChangeLog">Change Log</h1>
+
+        <p align="center">
+            <a href="#v11" target="_self">Version 11</a><br> 
+            <a href="#v10" target="_self">Version 10</a> | 
+            <a href="#v9" target="_self">Version 9</a> | 
+            <a href="#v8" target="_self">Version 8</a> | 
+            <a href="#v7" target="_self">Version 7</a> | 
+            <a href="#v6" target="_self">Version 6</a><br>
+            <a href="#v5" target="_self">Version 5</a> | 
+            <a href="#v4" target="_self">Version 4</a> | 
+            <a href="#v3" target="_self">Version 3</a> | 
+            <a href="#v2" target="_self">Version 2</a> | 
+            <a href="#v1" target="_self">Version 1</a>
+        </p>
+
+        <hr>
+
+        <h2 id="v11">Version 11</h2>
+        <h4>Additions</h4>
+        <ul>
+            <li>New Champion: Galena.</li>
+            <li>New Champion: Caleb.</li>
+            <li>New Map: Insomnia. Supports Deathmatch.</li>
+            <li>New Music: "He Who Walks In Blood" (track31.ogg). Based off of Chris Vrenna's "Volkerh" track in Quake Champions.</li>
+            <li>Added ammo types Bullets, Bolts, and Slugs. Ammo boxes not currently implemented, for now they spawn Spikes, Rockets, and Cells respectively.</li>
+            <li>Added "qcc_weapon_tribolt". Not currently implemented, for now spawns a grenade launcher.</li>
+            <li>Added QCC_FL_ABILITY flag. This should help aid in damage boosts for ability radius attacks against monsters, among other features.</li>
+            <li>
+                Added .qccSpeakSpawn, .qccSpeakFrag, .qccSpeakItem, .qccSpeakCthonGree, .qccSpeakCthonKill, .qccSpeakShubGreet, and .qccSpeakShubKill entity fields 
+                to more easily facilitate "chatty" champions like Gordon Freeman.
+            </li>
+            <li>
+                Added considerations for "Duel" Ruleset; mostly just modifies some item timing things for now. 
+                You can enable Duel by setting your server's "deathmatch" variable to "2".
+            </li>
+            <li>Began adding "Team Deathmatch" code. Feel free to test it out by setting your server's "deathmath" variable to "3".</li>
+        </ul>
+        <h4>Changes</h4>
+        <ul>
+            <li>Monsters no longer provide ability cooldown if they were killed by an ability.</li>
+            <li>Death Knight: Flame Strike deals extra damage against monsters, to match with other Champion offensive abilities.</li>
+            <li>Keel: Multi-grenades deal extra damage against monsters.</li>
+            <li>Slash: Plasma Trail now matches the player's skin. She still only has two skins, but hopefully we can get more in the future.</li>
+            <li>Duke Nukem: Devastator now deals extra damage against monsters.</li>
+            <li>Duke Nukem: Replaced all calls to Duke's voice line functions with the new .qccSpeak... fields. Duke now uses the speak fields along with Caleb.</li>
+            <li>Reduced bit rate on Goroth music, cutting down file size significantly. Probably didn't need to be at 418 kbps.</li>
+            <li>Separated QCC weapons into separate QC files to make them more manageable.</li>
+            <li>
+                Railgun ammo now uses Slugs instead of Cells. The icon will still show the Cells icon but only because the icons are hardcoded. 
+                The ammo count will display correctly.
+            </li>
+            <li>
+                Shells will now also give Bullets if there are no Bullet Boxes in the map. 
+                While not implemented yet, this will allow you to reload the Machine Gun in the official campaigns and multiplayer maps.
+            </li>
+            <li>
+                Rockets will now also give Bolts if there are no Bolt Boxes in the map. 
+                While not implemented yet, this will allow you to reload the Tribolt in the official campaigns and multiplayer maps.
+            </li>
+            <li>
+                Cells will now also give Slugs if there are no Slug Boxes in the map. 
+                This will allow you to reload the Railgun in the official campaigns and multiplayer maps.
+            </li>
+            <li>Ammo and Weapon Pickup definitions moved to respective weapon QC files.</li>
+            <li>Hourglass methods separated into own QC file.</li>
+            <li>Light Armor and Heavy Armor methods moved to it_armor.qc.</li>
+            <li>QCC_ThrowPowerup method moved to it_powerup.qc.</li>
+            <li>Weapons now have respawn times based upon the server's "deathmatch" variable.</li>
+                <li style="margin-left: 30px">Deathmatch 1 and 3 are Free For All and Team Deathmatch. Weapon respawn is 1 seconds.</li>
+                <li style="margin-left: 30px">Deathmatch 2 is Duel. Weapon respawn is 5 seconds. Powerups are removed.</li>
+            <li>Ammo boxes now have a 20 second respawn time in all Deathmatch modes.</li>
+        </ul>
+        <h4>Bug Fixes</h4>
+        <ul>
+            <li>Rerendered Duke Nukem's "trd" line from stereo to mono. Should play properly now.</li>
+            <li>Fixed broken precache of Duke "bug" line. Should play now.</li>
+        </ul>
+
+        <a href="#ChangeLog" target="_self">Top</a>
+
+        <hr>
+
+        <h2 id="v10">Version 10.1 Hot Fix</h2>
+        <h4>Bug Fixes</h4>
+        <ul>
+            <li>
+                Big John can exit the water now. The fix required making his hitbox slightly shorter, matching the same height as Scalebearer and Sorlag. 
+                Removed water checks for slow champs in the QCC Pre/Post Think functions since they were meant to try to fix this issue
+            </li>
+            <li>Added a condition for the Big John bots that will hopefully fix their ability useage.</li>
+            <li>Big John now only calls out his own name when you swap to him at the start of a match.</li>
+            <li>Cleaned up Big John Big Gun view model animation.</li>
+        </ul>
+
+        <h2>Version 10</h2>
+        <h4>Additions</h4>
+        <ul>
+            <li>New Champion: Keel.</li>
+            <li>New Champion: Big John.</li>
+            <li>New Map: Crucible. Supports Deathmatch and Horde Mode.</li>
+            <li>New Impulse Command: Cycle Previous Champion.</li>
+            <li>Bounce pads!</li>
+            <li>
+                Special Health. This item gives 25 health with the added ability to overstack. Special Health first appeared in Quake Champions 
+                on the map Crucible, in the location the Power Up used to be at before it was moved to the center of the map.
+            </li>
+            <li>Added "qcc_prop_dynamic". Used with the various torch props.</li>
+            <li>FGD updated to include the new entity classes.</li>
+            <li>
+                Info Intermission now takes optional "target" and "targetname" fields, which can be used to aim 
+                the camera at a target and update the camera's position respectively.
+            </li>
+            <li>
+                Cthon now has a "Don't freeze on pain" spawnflag. Dimension of the Machine reworked Cthon to make him killable with the Lightning Gun, 
+                but it was also a heavily scripted and conditional fight (by Quake's standards) where after every third of his health was lost 
+                Cthon would freeze and sink into the lava via an elevator, and would only rise again when triggered by a key collection. 
+                Now if you set both his "Killable" and "Don't freeze on pain" spawnflags Cthon can just be placed in a level and murdered (still only to the Lightning Gun).
+            </li>
+            <li>Trigger Change Level now has a "changelevel_use" function, allowing remote level changing.</li>
+        </ul>
+        <h4>Changes</h4>
+        <ul>
+            <li>Major codebase reorganization and revision. Hopefully this will allow players to be a bit more responsive (if function order even really matters, idk).</li>
+            <li>Doom Slayer now only makes pain sounds when below 50 health.</li>
+            <li>Duke Nukem's Devastator now deals full damage to Shamblers.</li>
+            <li>
+                Multi-grenades will now always shower mini-grenades. Previously they would only spawn mini-grenades after a timer, 
+                and would do a simple grenade explosion on contact with a living entity. Currently used by the Boss Ogre and Keel.
+            </li>
+            <li>
+                Multi-rockets no longer deal a random amount of bonus damage, instead doing a flat rate per rocket. 
+                They're not accessible by the player, but they could be added to an enemy in the future.
+            </li>
+            <li>
+                Self damage reduction is now controlled by the new .qccSelfDamage entity field, a float multiplier. 
+                When not set by an entity it defaults to 0.5. Currently used by Ranger and Keel.
+            </li>
+            <li>DoE Dragon now has the rocket resistance flag instead of classname checks in damage functions.</li>
+            <li>QC style Quad and Pentagram powerup now despawns if not picked up within 30 seconds.</li>
+            <li>Horde Mode Items no longer spawn Hourglasses. Instead they have a 1 in 6 chance of spawning a Special Health.</li>
+            <li>"func_spawn" has been reworked to be more KISS compliant.</li>
+            <li>SoA Gremlins limited to 25 clones in Horde Mode.</li>
+            <li>Goroth's explosive attacks should no longer blow out your speakers.</li>
+            <li>Increased Info Intermission camera count to 10.</li>
+            <li>Cthon, Fiend, DoE Guardian (Morph) and DoE Hephaestus (lavaman) code cleaned up.</li>
+        </ul>
+        <h4>Bug Fixes</h4>
+        <ul>
+            <li>
+                DoE Plasma Gun lightning bug fixed. Even though the Plasma Gun isn't useable for the player, 
+                the Dragon's projectile attack uses the same code. Don't know if this will make it harder or easier.
+            </li>
+            <li>Fixed dropped powerup from killed Quad / Pent bearer not despawning after a short period.</li>
+            <li>DoE Guardian (Morph) should no longer be invisible in Horde Mode.</li>
+            <li>DoE Guardian should no longer perpetually scream or glow after dying.</li>
+            <li>Goroth and Volkerh's FGD definitions now use the correct size.</li>
+            <li>Dropped power ups should now correctly give the remaining time left while also disappearing from the map. No more powerup dupes!</li>
+            <li>Protection should no longer gimp rocket jumps.</li>
+        </ul>
+        <h4>Known Issues</h4>
+        <ul>
+            <li>Keel and Big John head gibs don't apply the proper skin.</li>
+            <li>First power up doesn't print the "Incoming" / "Spawned" messages.</li>
+            <li>Crucible: Bots have difficulty navigating bounce pads and ledges and sometimes get stuck in certain areas.</li>
+            <li>Crucible: Bots in Horde mode have issues recognizing locked doors.</li>
+        </ul>
+        
+        <a href="#ChangeLog" target="_self">Top</a>
+
+        <hr>
+
+        <h2 id="v9">Version 9</h2>
+        <h4>Additions</h4>
+        <ul>
+            <li>New Champion: Slash.</li>
+            <li>New Champion: Anarki.</li>
+            <li>Added Observer Class; recommend "bind o impulse 29".</li>
+            <li>Heavily reworked source ID1 and QCC source file structure and cleaned up code.</li>
+            <li>Player class cleaned up. Now performs checks for custom player animations.</li>
+            <li>Added custom attack functionality. Should help in the future for BJ, Strogg, the Champion, and others.</li>
+            <li>Added QCC Flag QCC_FL_INFIGHT, to more cleanly allow monsters of the same class to infight.</li>
+            <li>Added messages.fgd include from Dimension of the Machine FGD pack.</li>
+            <li>Added entity model definitions to qcc.fgd.</li>
+        </ul>
+        <h4>Changes</h4>
+        <ul>
+            <li>Death Knight now has a unique Flame Strike animation.</li>
+            <li>Scalebearer Bull Rush should stop if colliding into an enemy does not kill it.</li>
+            <li>Grenades now deal direct damage the same way Rockets do.</li>
+            <li>Removed specific checks for "monster_army" and "monster_armagon" in T_Damage's in-fighting section and replaced with .qcc_flags check for new QCC_FL_INFIGHT flag.</li>
+            <li>Cleaned up Grunt code. Added infighting QCC Flag to monster_army() spawn function.</li>
+            <li>Cleaned up Armagon code. Added infighting QCC Flag to monster_armagon() spawn function.</li>
+            <li>Cleaned up Shambler code. Added rocket resistance and lightning resistance QCC Flags to monster_shambler() spawn function.</li>
+        </ul>
+        <h4>Bug Fixes</h4>
+        <ul>
+            <li>Champion ability impulse should no longer buffer, providing more reliable ability useage.</li>
+            <li>Champion state abilities (Ghost Walk, Berserk, Bull Rush) now check for the DEAD_DYING deadflag. Hopefully this will fix the frozen champion bug.</li>
+            <li>Champion ability cooldown is started if player dies mid-ability.</li>
+            <li>Corpse models in Dimension of the Machine maps should now display the correct animation frame.</li>
+            <li>Added a check to hopefully avoid accidentally using abilities on respawn.</li>
+            <li>Sorlag Air Control passive should only increase speed if already moving.</li>
+            <li>Sorlag Acid Spit should no longer get stuck unmoving in the air.</li>
+            <li>Intruder's Fast Fire Totem now doubles attack speed for the Nailgun and Lightning Gun.</li>
+            <li>Dimension of the Machine Runes should now spawn appropriately. Accidentally forgot a ".bsp" extension in the map checks for them.</li>
+            <li>Dimension of the Machine Runes can now be thrown by Intruder, just as intended John Romero intended.</li>
+            <li>Skins should be selectable in coop and horde modes now. Previously they would auto-switch to Red Team.</li>
+            <li>Picking up a health box while on fire or poisoned should now consume the health box even if at full health / overstacked.</li>
+            <li>Pentagram of Protection now reduces damage by 67% instead of 33%, making it infinitely more useful.</li>
+            <li>Changed player_run() self.walkframe check to >= 6 from == 6, just in case walkframe gets set elsewhere.</li>
+            <li>Reworked Death Knight's Flamestrike animation calls. This combined with the above self.walkframe fix should get his animations playing properly finally.</li>
+            <li>Implemented Shambler Lightning Arc Fix from Progs_Dump.</li>
+        </ul>
+        
+        <a href="#ChangeLog" target="_self">Top</a>
+
+        <hr>
+
+        <h2 id="v8">Version 8</h2>
+        <h4>Additions</h4>
+        <ul>
+            <li>New Champion: Scalebearer.</li>
+            <li>New Champion: Sorlag.</li>
+            <li>Added Dissolution of Eternity support. Use xpax.bat for ease of copying over the required data.</li>
+            <li>Added Linux shell script "xpax.sh" written by Slipseer community member plague_spreader.</li>
+            <li>Added flag to allow Quad <-> Pentagram respawn swaps when collected (collect Quad, respawns as Pent, collect Pent, respawns as Quad).</li>
+            <li>Horde Mode: Added 5% Horn of Conjuring, 10% Empathy Shield, 10% Power Shield, 5% Anti-Gravity Belt chances to Powerup Drop.</li>
+            <li>Added black bearded Intruder skin.</li>
+            <li>Added gib skins for Intruder. Gibs now correspond with current player model skin.</li>
+        </ul>
+        <h4>Changes</h4>
+        <ul>
+            <li>Players now drop their possessed powerups when they die (Quad, Pentagram, and Ring only).</li>
+            <li>Quad, Pentagram, and Ring now have 90 second delays before their first spawn in Deathmatch, then 120 seconds between respawns afterward.</li>
+            <li>Pentagram no longer provides invulnerability; instead it reduces damage by 2/3 3rds.</li>
+            <li>Horde Mode: Changed Pentagram drop rate from 25% to 30%. Quad drop rate lowered from 75% to 40%.</li>
+            <li>Lightning Gun now does 13 * cell ammo when fired in the water. It's technically less damage, but still almost 2000.</li>
+            <li>Nyx Invis time lowered to roughly 3 seconds (mistakenly set higher).</li>
+            <li>Doom Slayer Berserk time lowered to roughly 5 seconds (mistakenly set higher).</li>
+            <li>Doom Slayer Berserk movement speed increased to 500 UPS.</li>
+            <li>Commander Keen's Pogo Stick is a bit easier to navigate with.</li>
+            <li>Reworked Obituary cross-engine compatibility, setting appropriate .killstring, and .deathtype fields based on extension support.</li>
+        </ul>
+        
+        <a href="#ChangeLog" target="_self">Top</a>
+
+        <hr>
+
+        <h2 id="v7">Version 7.1 Hot Fix</h2>
+        <h4>Bug Fixes</h4>
+        <ul>
+            <li>Running out of ammo with Commander Keen should no longer throw a runaway loop.</li>
+            <li>Gremlins shouldn't be able to steal Champion Abilities. They couldn't use them anyway, but better safe than sorry.</li>
+        </ul>
+        
+        <a href="#ChangeLog" target="_self">Top</a>
+
+        <hr>
+
+        <h2>Version 7</h2>
+        <h4>Additions</h4>
+        <ul>
+            <li>New Champion: Commander Keen.</li>
+            <li>Added Scourge of Armagon support / requirement. Use xpax.bat for ease of copying over the required data.</li>
+            <li>Added Class Speed Differences. This is the start of adding different movement options for certain champions.</li>
+            <li>Added Armorshards. They get thrown by players on death in multiplayer, and by certain enemies.</li>
+            <li>
+                Abilities can now have a variable cost. This will allow for things like Keel having 3 grenades or Athena having 2 grapples. 
+                Currently only used for Commander Keen. The 20 second Dire Orb will not be making a return, sadly.
+            </li>
+            <li>Horde Mode now has a 33% chance to spawn hourglasses, 50% chance to spawn Health, and ~17% chance to spawn the new Light Armor.</li>
+            <li>Added Horde condition to Hourglass pickup.</li>
+            <li>New console background.</li>
+            <li>Added Ruby Nyx and Trans Ally Duke skins.</li>
+            <li>Some gibs now have multiple skins. Currently Nyx and Commander Keen.</li>
+            <li>Weapon Wheel now supports the Railgun, Laser Cannon, and Proximity Gun (Mjolnir will be added at a future date).</li>
+            <li>Status Bar Ranger Face replaced with "generic" Health Symbol.</li>
+            <li>FGD updated to support Scourge of Armagon, Dimension of the Machine, and new Quake Champions Classic items.</li>
+        </ul>
+        <h4>Changes</h4>
+        <ul>
+            <li>Weapons now give ammo according to current Quake Champions rules:</li>
+                <li style="margin-left: 30px;">If max ammo is 25, give 10 if below 10, otherwise give 5</li>
+                <li style="margin-left: 30px;">If max ammo is 150, give 100 if below 100, otherwise give 10</li>
+            <li>Ammo Boxes now give ammo based upon current Quake Champions rules:</li>
+                <li style="margin-left: 30px;">If max ammo is 25, give 5 for small and 10 for big</li>
+                <li style="margin-left: 30px;">If max ammo is 150, give 25 for small and 50 for big</li>
+            <li>Green and Yellow Armors now spawn in as Light Armors (+50). Red Armor now spawns in as Heavy Armor (+100, overstacks). Respawn times set to 30 seconds.</li>
+            <li>Armor now absorbs a flat 67% of damage. No more varying absorption rates.</li>
+            <li>Champion Classes now affect starting and maximum armor values.</li>
+            <li>Champions with a special jump ability now assign it to qccJumpFunc. This avoids a huge conditional check in the Client Jump function.</li>
+            <li>Resized and tilted all champ head gibs to be more in line with the default player gib.</li>
+            <li>Ending music changed to Quake Main Theme.</li>
+            <li>Ranger's Dire Orb now has Quad Glow.</li>
+            <li>Ranger should more consistently warp inside enemies that have been Orbed. Still needs more testing.</li>
+            <li>Nyx's Ghost Walk now prevents item pickup.</li>
+            <li>Nyx's Ghost Walk no longer shows Quad / Pentagram glow while active.</li>
+            <li>Cthon can now be telefragged. He is still impervious to other weapons.</li>
+            <li>Railgun now only replaces one Rocket Launcher if there are more than 1 in a Deathmatch map.</li>
+            <li>Ability Ready sounds will now only play for the player and not the world if the engine supports "localsound". Otherwise, fall back to previous behavior.</li>
+            <li>Health overstack now carries over to the next map in SP and Coop.</li>
+            <li>Refactored Bot ability use code. You probably won't notice.</li>
+        </ul>
+        <h4>Bug Fixes</h4>
+        <ul>
+            <li>Champions can now be selected properly after changing maps in a server.</li>
+            <li>Railgun will now only replace a Rocket Launcher at the start of a map.</li>
+            <li>Locked buttons now display the correct required key. Plays locked sound again.</li>
+            <li>
+                Weapons in multiplayer now only trigger their targets the first time they are picked up. This was a missed line when porting over MG1 QC code. 
+                This should resolve the Cthon fight issues at the end of Dimension of the Machine and potentially any other coop weapon trigger issues.
+            </li>
+            <li>Horde mode used to not spawn rotten healths because of a missing else conditional. Fixed this after the rotten health->hourglass swap.</li>
+            <li>Abilities will no longer weapon lock you when changing levels while an ability is active. Should also fix some respawn bugs, too.</li>
+            <li>Connected players now increments, allowing coop item code to work.</li>
+        </ul>
+        
+        <a href="#ChangeLog" target="_self">Top</a>
+
+        <hr>
+
+        <h2 id="v6">Version 6</h2>
+        <h4>Additions</h4>
+        <ul>
+            <li>New Champion: The Intruder from DUSK. Don't tell David.</li>
+            <li>
+                Added Champion Select Menu for Rerelease. You activate the menu the same way as cycling through champions. 
+                Falls back on old behavior when using other engines. Unfortunately this is not feasible for skins, due to the number of impulse commands that would be required.
+            </li>
+            <li>Added Dimension of the Machine and Horde Mode support. Dimension of the Past supported by default. A batch file is included to assist with this.</li>
+            <li>Added Ranger + Nyx ability telefrag messages. They don't seem to work properly yet though, I'll have to straighten that out next update.</li>
+            <li>Shub Speaks! upon seeing a player.</li>
+            <li>Player Gibs now have a new BodyQueue system to support the Intruder. This potentially doubles the amount of corpses in play.</li>
+            <li>Added Railgun to Rerelease Weapon Wheel. Currently uses Lightning Gun icon.</li>
+        </ul>
+        <h4>Changes</h4>
+        <ul>
+            <li>
+                Consolidated everything into the Rerelease QC files. Every sprint, bprint, and centerprint call now has backwards compatibility 
+                with the old string formatting. A little painful to implement, but eases the development A LOT. Fewer QC files to maintain, 
+                and adds the possibility of adding language support for Rerelease in the future more easily.
+            </li>
+            <li>Remapped QCC impulses due to how the Rerelease Champion Menu needed to be implemented. Be sure to update your key binds!</li>
+            <li>Nyx Ghostwalk color shift is BLUE now.</li>
+            <li>Doom Slayer has less blood in his eyes when going Berserk.</li>
+        </ul>
+        <h4>Bug Fixes</h4>
+        <ul>
+            <li>
+                Skins now appropriately wrap through the individual champion's available skins. 
+                Ring of Shadows and Nyx's Invis now use skin 0, then set the skin back once visible again. No more endless console complaints!
+            </li>
+            <li>Ranger Bots should more frequently warp to their orb if a potential enemy is close enough to it (32u).</li>
+            <li>
+                Duke Nukem no longer has the ability to start talking underwater. Probably. 
+                If he starts talking moments before hopping into the water, he'll continue to. I'll fix that next update. Probably.
+            </li>
+        </ul>
+        <h4>Known Issues</h4>
+        <ul>
+            <li>Final boss in Dimension of the Machine seems to have scripting issues when playing in Coop. This may be a wider issue for coop. Currently works in Single Player.</li>
+            <li>Horde Mode Lock Buttons will print the wrong key type, but still require the correct key type.</li>
+        </ul>
+        
+        <a href="#ChangeLog" target="_self">Top</a>
+
+        <hr>
+
+        <h2 id="v5">Version 5</h2>
+        <h4>Additions</h4>
+        <ul>
+            <li>
+                New Weapon: Railgun. Multiple DM maps either had rocket launchers replaced or a railgun added. 
+                Every id1 episode has 1 railgun to find. Recommended bind: "bind r impulse 109".
+            </li>
+            <li>
+                Added Bot Support. Bots will randomize Champion picks and skins. They will also use the new Railgun and their Abilities when they feel appropriate. 
+                They may still have some bugs, but seemed to test fine as of version 5's release.
+            </li>
+            <li>Added alternate skins for Death Knight.</li>
+            <li>Ranger and Duke Nukem now have Green Skins. Doom Slayer will retain his Green Skin when on Green Team in Team Deathmatch.</li>
+        </ul>
+        <h4>Bug Fixes</h4>
+        <ul>
+            <li>
+                Kill command in multiplayer no longer crashes the game. The issue was the "set_suicide_frame" method checking for a specific player MDL. 
+                Now it just checks if the model is the Champ Gib model.
+            </li>
+            <li>Current Champions should no longer exit Abilities early or get stuck in them.</li>
+        </ul>
+        
+        <a href="#ChangeLog" target="_self">Top</a>
+
+        <hr>
+
+        <h2 id="v4">Version 4</h2>
+        <h4>Additions</h4>
+        <ul>
+            <li>New Champion: Duke Nukem.</li>
+            <li>Added Ability and Melee Weapon specific kill messages.</li>
+            <li>Shub now looks for players before going into standard idle. This allows player reactions upon "seeing" her.</li>
+        </ul>
+        <h4>Bug Fixes</h4>
+        <ul>
+            <li>Skins now properly change and are maintained across deaths.</li>
+            <li>Weapon autoswaps, weapon + ammo pickups no longer switch away from active abilities.</li>
+        </ul>
+        
+        <a href="#ChangeLog" target="_self">Top</a>
+
+        <hr>
+
+        <h2 id="v3">Version 3</h2>
+        <h4>Additions</h4>
+        <ul>
+            <li>New Champion: Doom Slayer.</li>
+            <li>Melee Weapons now produce customizable wall hit sounds and optional enemy hit sounds</li>
+            <li>Added skin support:</li>
+                <li style="margin-left: 30px;">In most engines changing teams will change skins.</li>
+                <li style="margin-left: 30px;">In Rerelease, skins change based on teams only in team mode. In free for all modes, use "impulse 137". I bound it to K.</li>
+                <li style="margin-left: 30px;">Currently utilized only by Ranger and Doom Slayer, but planning support for others.</li>
+        </ul>
+        <h4>Changes</h4>
+        <ul>
+            <li>Changed Dire Orb speed from 500 to 620, to be roughly twice Ranger's base move speed.</li>
+        </ul>
+        <h4>Bug Fixes</h4>
+        <ul>
+            <li>
+                Fixed Wall/Double Jump Bug: in the event that a player queued up a new Champion without double jump after dying mid double jump as Nyx or Doom Slayer, 
+                they were unable to jump. Now self.qccDoubleJump gets reset to 0 on respawn.
+            </li>
+            <li>
+                Fixed Ranger Dire Orb animation bug: interrupting the Dire Orb think process could cause Ranger to be unable to act. 
+                Dire Orb throw animation now utilizes standard animation function calls.
+            </li>
+        </ul>
+        <h4>Known Issues</h4>
+        <ul>
+            <li>
+                Berserk ability tilts the view angle due to the way the red tint is acquired. I felt this was an acceptable tradeoff since this mod is intended to be 
+                QuakeC only + re-release compatible, and color tints seem to be hardcoded to specfic scenarios.
+            </li>
+        </ul>
+        
+        <a href="#ChangeLog" target="_self">Top</a>
+
+        <hr>
+
+        <h2 id="v2">Version 2</h2>
+        <h4>Additions</h4>
+        <ul>
+            <li>New Champion: Nyx.</li>
+            <li>Champion selection persists across levels (reverts to Ranger if you use the map cheat).</li>
+            <li>Added Ability Ready notification + sound.</li>
+            <li>Added Hourglass pickup sound, no longer uses rotten health.</li>
+            <li>Changed Shub Death scene to show current champion.</li>
+        </ul>
+        <h4>Changes</h4>
+        <ul>
+            <li>Monsters no longer print the ability timer cooldowns, now only hourglasses and attempting to use the ability will.</li>
+        </ul>
+        <h4>Bug Fixes</h4>
+        <ul>
+            <li>Fixed armor reset bug - armor now only gets set on spawn in Deathmatch modes.</li>
+        </ul>
+        
+        <a href="#ChangeLog" target="_self">Top</a>
+
+        <hr>
+
+        <h2 id="v1">Version 1</h2>
+        <ul>
+            <li>First release:</li>
+                <li style="margin-left: 30px;">Ability Mechanic.</li>
+                <li style="margin-left: 30px;">Champion Mechanic.</li>
+            <li>New Champion: Ranger.</li>
+            <li>New Champion: Death Knight.</li>
+        </ul>
+        
+        <a href="#ChangeLog" target="_self">Top</a>
+
+        <br><br><br>
+    </div>
+</body>
+</html>

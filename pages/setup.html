@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <h1 align="center">Setup</h1>
+
+    <h2>Requirements</h2>
+    <p>
+        To play <i>Quake Champions Classic</i>, you will need to own a copy of <i>Quake 1</i> and the official Mission Packs, <i>Scourge of Armagon</i>, 
+        <i>Dissolution of Eternity</i>, <i>Dimension of the Past</i>, and <i>Dimension of the Machine</i>.
+    </p>
+    <p>
+        The mod is designed with Nightdive Remaster compatibility in mind, but is also tested on the Ironwail source port. 
+        The mod <i>should</i> be mostly engine agnostic, as it is designed completely in Quake C with conditional checks in place for Remaster exclusive features.
+    </p>
+
+    <h2>Installation</h2>
+    <p>
+        For the 2021 Rerelease, extract the mod folder inside the <i>../Steam/steamapps/common/Quake/rerelease/</i> folder. For all other engines, 
+        follow their mod installation instructions (typically copy the mod folder to the Quake root folder).
+    </p>
+
+    <p align=center><img src="../images/setup00.png" height="250px" alt="Setup Guide 1"></p>
+
+    <p>
+        Once extracted, run <b><i>xpax.bat</i></b> to automatically copy the data from the addons into the mod folder. For Linux users, 
+        <b><i>xpax.sh</i></b> is provided thanks to a community member contribution. The Mission Packs should be installed in their default locations 
+        (eg: <i>Quake Install Path\hipnotic\</i>). Once the batch file is run, the QCC folder should contain multiple pak files and a music folder.
+    </p>
+    <p>
+        If for some reason you are unable to run either the batch or shell script and must perform the setup manually, 
+        you'll need to rename <i>pak0.pak</i> to <i>pak4.pak</i>, then copy and rename the following pak files:
+    </p>
+
+    <p align="center">
+        <table>
+            <tr class="header">
+                <td>Origin</td>
+                <td>Rename</td>
+            </tr>
+            <tr>
+                <td>hipnotic/pak0.pak</td>
+                <td>pak0.pak</td>
+            </tr>
+            <tr>
+                <td>rogue/pak0.pak</td>
+                <td>pak1.pak</td>
+            </tr>
+            <tr>
+                <td>dopa/pak0.pak</td>
+                <td>pak2.pak</td>
+            </tr>
+            <tr>
+                <td>mg1/pak0.pak</td>
+                <td>pak3.pak</td>
+            </tr>
+        </table>
+    </p>
+
+    <p>Once the files are copied and renamed, your QCC folder should look like this:</p>
+
+    <p align=center><img src="../images/setup01.png" height="250px" alt="Setup Guide 2"></p>
+
+    <p>
+        If you were able to run the batch file or shell script, the music folder will have automatically copied and renamed all of the tracks. 
+        If you need to do this manually, the soundtrack order is <i>Quake</i> (<i>id1</i>), <i>Scourge of Armagon</i> (<i>hipnotic</i>), 
+        and <i>Dissolution of Eternity</i> (<i>rogue</i>).
+    </p>
+
+    <h2>Additional Setup</h2>
+    <p>
+        It is highly recommended to bind the new impulses added with the mod. Please read the <a href="impulse.html" target="main"><b>Impulses chapter</b></a> to learn more.
+    </p>
+    <br><br><br>
+</body>
+</html>
