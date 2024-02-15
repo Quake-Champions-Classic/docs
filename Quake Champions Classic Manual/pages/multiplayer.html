@@ -35,8 +35,8 @@
         <h2 id="DeathmatchModes">Deathmatch Modes</h2>
         <p>
             Currently implemented is an experimental Deathmatch Mode system. It's a bit hacky at the moment due to the way the Quake engine works. 
-            To change Deathmatch Modes you'll first need to enter the console command <b>deathmatch #</b>, where <i>#</i> is the desired mode ID. 
-            After that you'll need to enter <b>impulse 40</b> to update the current match. The currently tracked modes are:
+            To change Deathmatch Modes you'll use <b>impulse 4#</b>, where <b>#</b> is the deathmatch mode you wish to switch to. 
+            The currently tracked modes are:
         </p>
         <table>
             <tr class="header">
@@ -88,7 +88,8 @@
                     Weapons have a 1 second respawn time.<br>
                     Normal powerup behavior.<br>
                     Only champion team skins available.<br>
-                    Players on the same team share frags.<br>
+                    <a class="sidenav" href="impulse.html#NewImpulseCommands" target="main">Swap teams by changing skins.</a><br>
+                    Players on the same team share frags.
                 </td>
             </tr>
             <tr>
@@ -98,8 +99,10 @@
                     Weapons have a 1 second respawn time.<br>
                     Normal powerup behavior.<br>
                     Only champion team skins available.<br>
+                    <a class="sidenav" href="impulse.html#NewImpulseCommands" target="main">Swap teams by changing skins.</a><br>
                     Players cannot score frags through killing.<br>
-                    Frags are accumulated through capturing flags.
+                    Frags are accumulated through capturing flags.<br>
+                    Requires special map setup, don't set this mode manually.
                 </td>
             </tr>
         </table>
