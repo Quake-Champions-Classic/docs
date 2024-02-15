@@ -23,6 +23,45 @@
 
         <hr>
 
+        <h2 id="v11">Version 11.1 Hot Fix</h2>
+        <h4>Additions</h4>
+        <ul>
+            <li>Added "impulse 40" to help update the current deathmatch mode.</li>
+            <li>Updated manual to include section on Deathmatch Modes.</li>
+            <li>Bots will now choose either Red or Blue team when switching to Team Deathmatch or Capture the Flag.</li>
+            <li>Shotgun, Grenade Launcher, Rocket Launcher, and Railgun pickups now only give 1 ammo if ammo is equal or more than 10.</li>
+        </ul>
+        <h4>Changes</h4>
+        <ul>
+            <li>Renamed "pak0.pak" to "pakx.pak". The pak file needs to be renamed regardless and the mod doesn't work without the other pak files.</li>
+            <li>Ranger Dire Orb throw animation is significantly faster, allowing him to warp much more quickly. Should make it easier to use.</li>
+        </ul>
+        <h4>Bug Fixes</h4>
+        <ul>
+            <li>Horde Mode weapons respawn again, based on Deathmatch rules.</li>
+            <li>
+                Fixed Deathmatch Frag Limit bug. In Ironwail, the default Deathmatch value is 1, while in the Remaster it's 3. This was causing the 
+                match to assume it was in Team Deathmatch, causing issues with proper scoring. Team Scoring has been reworked to avoid these issues and 
+                Team Deathmatch is now "deathmatch 4". Both "deathmatch 1" and "deathmatch 3" correspond to Free For All / Normal Deathmatch.
+            </li>
+            <li>Team mates can no longer directly harm each other in team modes.</li>
+            <li>Gib models now display correct skins.</li>
+            <li>Ammo will no longer exceed max limits.</li>
+        </ul>
+        <h4>Known Issues</h4>
+        <ul>
+            <li>Bots will attack team mates, even though they can't harm them.</li>
+            <li>Big John can sometimes be unable to get out of the water in certain areas on certain maps.</li>
+            <li>
+                Bots playing as Big John can still get stuck in a pseudo Big Barrage state, causing them to jump in place unable to move
+                after using their ability.
+            </li>
+            <li>
+                Bounce pads can be a little finicky. To more reliably bounce on diagonal bounce pads, stop holding your movement inputs just before 
+                stepping or jumping onto the bounce pad.
+            </li>
+        </ul>
+
         <h2 id="v11">Version 11</h2>
         <h4>Additions</h4>
         <ul>
@@ -42,15 +81,36 @@
                 You can enable Duel by setting your server's "deathmatch" variable to "2".
             </li>
             <li>Began adding "Team Deathmatch" code. Feel free to test it out by setting your server's "deathmath" variable to "3".</li>
+            <lli>
+                Added "trigger_heal" entity. This entity will heal 5 points of health every other second or so, up to an overstack of 175. 
+                Currently implemented in the blood hall in Insomnia.
+            </lli>
         </ul>
         <h4>Changes</h4>
         <ul>
+            <li>
+                Cooldowns increased from 45 to 60 seconds. They now use a global cooldown constant in case it needs to be changed later. 
+                Champions with shorter cooldowns (Keen, Keel) now divide against that global cooldown constant, so that they still provide the same number of uses.
+            </li>
             <li>Monsters no longer provide ability cooldown if they were killed by an ability.</li>
+            <li>Reduced velocity of thrown armor shards.</li>
+            <li>Reduced number of armor shards thrown by enemies.</li>
+            <li>Ranger Dire Orb now deals 15 touch damage (down from 50, live was 25, oops).</li>
             <li>Death Knight: Flame Strike deals extra damage against monsters, to match with other Champion offensive abilities.</li>
+            <li>Death Knight ability speed increased from 300 to 666 (live was 800!).</li>
             <li>Keel: Multi-grenades deal extra damage against monsters.</li>
             <li>Slash: Plasma Trail now matches the player's skin. She still only has two skins, but hopefully we can get more in the future.</li>
             <li>Duke Nukem: Devastator now deals extra damage against monsters.</li>
             <li>Duke Nukem: Replaced all calls to Duke's voice line functions with the new .qccSpeak... fields. Duke now uses the speak fields along with Caleb.</li>
+            <li>Anarki max speed reduced from 640 to 625.</li>
+            <li>Anarki max inject speed reduced from 716 to 700.</li>
+            <li>Scalebearer Forward Accel reduced from 500 to 450.</li>
+            <li>Scalebearer Heavyweight does scaling damage based on speed to a maximum of 25 at 395 ups (prev 25 or 50 at speed thresholds).</li>
+            <li>Scalebearer Bull Rush now does a flat 75 damage.</li>
+            <li>Scalebearer Bull Rush damage reduction reduced from 67% to 50%.</li>
+            <li>Scalebearer Bull Rush shoot delay is now set to 0.4 seconds.</li>
+            <li>Slash max speed reduced from 830 to 700 (live was 750, oops!).</li>
+            <li>Sorlag max speed reduced from 625 to 600.</li>
             <li>Reduced bit rate on Goroth music, cutting down file size significantly. Probably didn't need to be at 418 kbps.</li>
             <li>Separated QCC weapons into separate QC files to make them more manageable.</li>
             <li>

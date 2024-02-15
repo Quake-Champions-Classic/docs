@@ -31,6 +31,78 @@
             For other engines, follow their instructions. It is typically enough to activate the mod with the console command <b>game qcc</b> 
             and then host / join a game as normal.
         </p>
+
+        <h2 id="DeathmatchModes">Deathmatch Modes</h2>
+        <p>
+            Currently implemented is an experimental Deathmatch Mode system. It's a bit hacky at the moment due to the way the Quake engine works. 
+            To change Deathmatch Modes you'll first need to enter the console command <b>deathmatch #</b>, where <i>#</i> is the desired mode ID. 
+            After that you'll need to enter <b>impulse 40</b> to update the current match. The currently tracked modes are:
+        </p>
+        <table>
+            <tr class="header">
+                <td>Deathmatch Mode</td>
+                <td>Game Type</td>
+                <td>Description</td>
+            </tr>
+            <tr>
+                <td>0</td>
+                <td>Campaign</td>
+                <td>Used for Singleplayer, Coop, and Horde Mode.<br>
+                    Weapons have a 1 second respawn time in Horde Mode.<br>
+                    Automatically sets to this when running those game mode types in any engine.
+                </td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Free For All</td>
+                <td>
+                    Weapons have a 1 second respawn time.<br>
+                    Normal powerup behavior.<br>
+                    All champion skins available.<br>
+                    Default Deathmatch mode for most engines.
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Duel</td>
+                <td>
+                    Weapons have a 5 second respawn time.<br>
+                    Powerups do not spawn at start and will not respawn once picked up.<br>
+                    All champion skins available.
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Free For All</td>
+                <td>
+                    Weapons have a 1 second respawn time.<br>
+                    Normal powerup behavior.<br>
+                    All champion skins available.<br>
+                    Default Deathmatch mode for the Nightdive Remaster.
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Team Deathmatch</td>
+                <td>
+                    Weapons have a 1 second respawn time.<br>
+                    Normal powerup behavior.<br>
+                    Only champion team skins available.<br>
+                    Players on the same team share frags.<br>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Capture the Flag</td>
+                <td>
+                    Weapons have a 1 second respawn time.<br>
+                    Normal powerup behavior.<br>
+                    Only champion team skins available.<br>
+                    Players cannot score frags through killing.<br>
+                    Frags are accumulated through capturing flags.
+                </td>
+            </tr>
+        </table>
         <br><br><br>
     </div>
 </body>
