@@ -136,7 +136,7 @@ iframe.main {
     overflow-x: hidden;
     overflow-y: auto;
     background-color: #eee3ce;
-    background-image: url("images/qccbg.png");
+    background-image: url("../images/qccbg.png");
     background-repeat: repeat-y;
     border: none;
     padding-left: 10px;
@@ -144,6 +144,8 @@ iframe.main {
 }
 
 div.main {
-    color: #1f1f1f;
+    background-color: #eee3ce;
+    background-image: url("../images/qccbg.png");
+    background-repeat: repeat-y;
 }
 /* Main Body End */

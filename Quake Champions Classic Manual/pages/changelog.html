@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="main">
         <h1 align="center" id="ChangeLog">Change Log</h1>
 
         <p align="center">
+            <a href="#v12" target="_self">Version 12</a> | 
             <a href="#v11" target="_self">Version 11</a><br> 
             <a href="#v10" target="_self">Version 10</a> | 
             <a href="#v9" target="_self">Version 9</a> | 
@@ -22,6 +23,35 @@
         </p>
 
         <hr>
+
+        <h2 id="v12">Version 12</h2>
+        <h4>Additions</h4>
+        <ul>
+            <li>New Champion: Gordon Freeman.</li>
+            <li>New Map: The Vale of Pnath. Supports Deathmatch and Horde Mode.</li>
+            <li>New music: "The Netherworld" (track34.ogg) Based off of Andrew Hulshult's "Ithagnal" track in Quake Champions.</li>
+            <li>Add <i>skin</i> property to <i>qcc_prop_dynamic</i> in <i>qcc.fgd</i>.</li>
+            <li>Add <i>wait</i> property to <i>trigger_counter</i> in <i>qcc.fgd</i>. <i>Wait</i> is used as the reset value when a counter reaches zero.</li>
+            <li>Add new <i>qccSpeakDamaged</i> entity field, to allow for extra sounds on getting hurt. Currently used with Gordon's HEV suit.</li>
+            <li>
+                Add new <i>QCC_FL_FAST_MELEE</i> flag. Allows for Champion Melee Weapon attacks to be twice as fast. 
+                Currently used with Gordon Freeman's crowbar and the Intruder's sickles.
+            </li>
+        </ul>
+        <h4>Changes</h4>
+        <ul>
+            <li>Crucible and Insomnia now have map names instead of just filenames when displaying map info in-game.</li>
+            <li>Re-lit Crucible and Insomnia with an extra bounce light.</li>
+            <li><i>qccSpeakFrag</i> and <i>qccSpeakDamaged</i> now default to the <i>QCC_SpeakCombatNull</i> method.</li>
+        </ul>
+        <h4>Bug Fixes</h4>
+        <ul>
+            <li>Plugged a leak in Insomnia.</li>
+            <li>
+                <i>isHordeMode</i> global now resets state on New Game. This previously would not get reset to zero after playing a Horde Mode map 
+                and then choosing to start a New Game after, resulting in unexpected behavior and crashes.
+            </li>
+        </ul>
         
         <h2 id="v11">Version 11.2 Hot Fix</h2>
         <h4>Additions</h4>
