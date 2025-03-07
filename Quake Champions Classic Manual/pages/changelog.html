@@ -29,21 +29,30 @@
         <ul>
             <li>New Champion: Gordon Freeman.</li>
             <li>New Map: The Vale of Pnath. Supports Deathmatch and Horde Mode.</li>
-            <li>New music: "The Netherworld" (track34.ogg) Based off of Andrew Hulshult's "Ithagnal" track in Quake Champions.</li>
-            <li>Add <i>skin</i> property to <i>qcc_prop_dynamic</i> in <i>qcc.fgd</i>.</li>
-            <li>Add <i>wait</i> property to <i>trigger_counter</i> in <i>qcc.fgd</i>. <i>Wait</i> is used as the reset value when a counter reaches zero.</li>
-            <li>Add new <i>qccSpeakDamaged</i> entity field, to allow for extra sounds on getting hurt. Currently used with Gordon's HEV suit.</li>
+            <li>New Music: "The Netherworld" (track34.ogg) Based off of Andrew Hulshult's "Ithagnal" track in Quake Champions.</li>
+            <li>New Monster: Ithagnal. Can be used in custom single player and horde maps.</li>
+            <li>Added <i>skin</i> property to <i>qcc_prop_dynamic</i> in <i>qcc.fgd</i>.</li>
+            <li>Added <i>wait</i> property to <i>trigger_counter</i> in <i>qcc.fgd</i>. <i>Wait</i> is used as the reset value when a counter reaches zero.</li>
+            <li>Added new <i>qccSpeakDamaged</i> entity field, to allow for extra sounds on getting hurt. Currently used with Gordon's HEV suit.</li>
             <li>
-                Add new <i>QCC_FL_FAST_MELEE</i> flag. Allows for Champion Melee Weapon attacks to be twice as fast. 
+                Added new <i>QCC_FL_FAST_MELEE</i> flag. Allows for Champion Melee Weapon attacks to be twice as fast. 
                 Currently used with Gordon Freeman's crowbar and the Intruder's sickles.
             </li>
+            <li>Added <i>qcc_bouncepad</i> to <i>bots/interactibles.txt</i>.</li>
+            <li>Added heavy machine gun and tribolt to <i>bots/weapons.txt</i>, currently commented out until they're added to the game proper.</li>
+            <li>Added <i>qcc_weapon_heavymachinegun</i> and <i>qcc_weapon_tribolt</i> to <i>bots/items.txt</i>.</li>
             <li>Added release years for Champion debuts in the manual. Time to feel ancient.</li>
         </ul>
         <h4>Changes</h4>
         <ul>
             <li>Crucible and Insomnia now have map names instead of just filenames when displaying map info in-game.</li>
             <li>Re-lit Crucible and Insomnia with an extra bounce light.</li>
+            <li>Ranger: Dire Orb should teleport more reliably when telefragging an enemy with perfect orb placement.</li>
+            <li>Ranger: Dire Orb should no longer one shot Elder Gods (except for id1 Shub and Cthon).</li>
+            <li>Sorlag: Acid Spit pool now has a larger bbox, from 12 to 20 units. Should make it more useful.</li>
             <li><i>qccSpeakFrag</i> and <i>qccSpeakDamaged</i> now default to the <i>QCC_SpeakCombatNull</i> method.</li>
+            <li>Volkerh: <i>bots/monsters.txt</i> updated to remove <i>melee</i> attribute as Volkerh has no melee attacks.</li>
+            <li>Changed <i>qcc_weapon_railgun</i> to use <i>plasma_cells</i> instead of <i>cells</i> in <i>bots/items.txt</i>.</li>
             <li>Champion images in the manual have had their dead space trimmed.</li>
             <li>Fixed a few documentation errors.</li>
         </ul>
