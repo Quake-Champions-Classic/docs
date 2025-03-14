@@ -28,23 +28,40 @@
         <h4>Additions</h4>
         <ul>
             <li>New Champion: Gordon Freeman.</li>
+            <li>New Weapon: Heavy Machine Gun.</li>
             <li>New Map: The Vale of Pnath. Supports Deathmatch and Horde Mode.</li>
             <li>New Music: "The Netherworld" (track34.ogg) Based off of Andrew Hulshult's "Ithagnal" track in Quake Champions.</li>
-            <li>New Monster: Ithagnal. Can be used in custom single player and horde maps.</li>
+            <li>New Monster: Ithagnal. Can be used in custom single player and horde maps. She has some abilities that may surprise you.</li>
             <li>Added <i>skin</i> property to <i>qcc_prop_dynamic</i> in <i>qcc.fgd</i>.</li>
             <li>Added <i>wait</i> property to <i>trigger_counter</i> in <i>qcc.fgd</i>. <i>Wait</i> is used as the reset value when a counter reaches zero.</li>
             <li>Added new <i>qccSpeakDamaged</i> entity field, to allow for extra sounds on getting hurt. Currently used with Gordon's HEV suit.</li>
             <li>
                 Added new <i>QCC_FL_FAST_MELEE</i> flag. Allows for Champion Melee Weapon attacks to be twice as fast. 
-                Currently used with Gordon Freeman's crowbar and the Intruder's sickles.
+                Currently used with Gordon Freeman's crowbar and the Intruder's sickles. Will probably add this flag to Nyx in the next update.
             </li>
             <li>Added <i>qcc_bouncepad</i> to <i>bots/interactibles.txt</i>.</li>
-            <li>Added heavy machine gun and tribolt to <i>bots/weapons.txt</i>, currently commented out until they're added to the game proper.</li>
+            <li>Added heavy machine gun and tribolt to <i>bots/weapons.txt</i>. Tribolt is currently commented out until it's added to the game proper.</li>
             <li>Added <i>qcc_weapon_heavymachinegun</i> and <i>qcc_weapon_tribolt</i> to <i>bots/items.txt</i>.</li>
+            <li>Added <i>qcc_item_bullets</i>, <i>qcc_item_bolts</i>, and <i>qcc_item_slugs</i> to <i>bots/items.txt</i>.</li>
             <li>Added release years for Champion debuts in the manual. Time to feel ancient.</li>
         </ul>
         <h4>Changes</h4>
         <ul>
+            <li>
+                Mod files are now split across 2 PAK files due to exceeding Github limits, <i>pakx.pak</i> and <i>paky.pak</i>. 
+                <i>xpax.bat</i> and <i>xpax.sh</i> scripts have been updated accordingly. Setup chapter updated to reflect this change as well.
+            </li>
+            <li>
+                Weapon implementations have been given a small overhaul, to hopefully make modified attack handlers easier to manage. 
+                Think <i>Amid Evil</i>...
+            </li>
+            <li>Weapon HUD icons have been updated. Shotgun and Nailgun are removed. Heavy Machine Gun and Railgun are added.</li>
+            <li>Remaster Weapon Wheel is updated to include Heavy Machine Gun while removing Shotgun and Nailgun.</li>
+            <li>Shotgun is now replaced by Super Shotgun once the Super Shotgun is picked up.</li>
+            <li>Super Shotgun now only consumes 1 shell per shot, bringing it in line with <i>Quake Champions</i>.</li>
+            <li>Nailgun is now a starting weapon. Currently you do not start off with nail ammo, so you can't use it until you stock up on some.</li>
+            <li>Nailgun is now replaced by the Super Nailgun once the Super Nailgun is picked up.</li>
+            <li>Super Nailgun now only consumes 1 nail per shot, bringing it in line with <i>Quake Champions</i>.</li>
             <li>Crucible and Insomnia now have map names instead of just filenames when displaying map info in-game.</li>
             <li>Re-lit Crucible and Insomnia with an extra bounce light.</li>
             <li>Ranger: Dire Orb should teleport more reliably when telefragging an enemy with perfect orb placement.</li>
