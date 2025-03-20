@@ -62,6 +62,7 @@
             <li>Nailgun is now a starting weapon. Currently you do not start off with nail ammo, so you can't use it until you stock up on some.</li>
             <li>Nailgun is now replaced by the Super Nailgun once the Super Nailgun is picked up.</li>
             <li>Super Nailgun now only consumes 1 nail per shot, bringing it in line with <i>Quake Champions</i>.</li>
+            <li>Dropped backpacks now support bullet, bolt, and slug ammo types.</li>
             <li>Crucible and Insomnia now have map names instead of just filenames when displaying map info in-game.</li>
             <li>Re-lit Crucible and Insomnia with an extra bounce light.</li>
             <li>Ranger: Dire Orb should teleport more reliably when telefragging an enemy with perfect orb placement.</li>
@@ -79,6 +80,10 @@
             <li>
                 <i>isHordeMode</i> global now resets state on New Game. This previously would not get reset to zero after playing a Horde Mode map 
                 and then choosing to start a New Game after, resulting in unexpected behavior and crashes.
+            </li>
+            <li>
+                Nyx's Ghost Walk now changes Nyx's attack function to <i>SUB_Null</i> while invisible, and back to <i>W_Attack</i> when exiting invisibility. 
+                Nyx Bots <i>shouldn't</i> be able to shoot while invisible anymore.
             </li>
         </ul>
         
